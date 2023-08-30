@@ -1,5 +1,16 @@
 <template lang="pug">
-nuxt-img(src='images/svg/logo.svg' alt='logo' width='133px' height='32px') 
-slot
-p another text
+div(class="app")
+    GlobalHeader
+    slot
+    GlobalFooter
 </template>
+
+<style lang="scss">
+    .app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: $white;
+    }
+</style>
