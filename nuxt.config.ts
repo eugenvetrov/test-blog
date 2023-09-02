@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/index.scss'],
   modules: [
     '@nuxt/image',
+    '@pinia/nuxt',
   ],
   components: {
 		global: true,
@@ -17,5 +18,16 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  pinia: {
+    autoImports: [
+      'defineStore',
+      ['defineStore', 'definePiniaStore'],
+    ],
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL
+    }  
   }
 })

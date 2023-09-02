@@ -11,6 +11,6 @@ div(class="app")
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background-color: $white;
+        background-color: $white-smoke;
     }
 </style>
