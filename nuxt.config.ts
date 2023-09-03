@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/index.scss'],
@@ -29,5 +28,11 @@ export default defineNuxtConfig({
     public: {
       apiUrl: process.env.API_URL
     }  
-  }
+  },
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    },
+  },
 })

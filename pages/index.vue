@@ -1,5 +1,5 @@
 <template lang="pug">
-div {{ homeData.page_type }}
+PageContent(:data="homeData")
 </template>
 
 <script setup lang="ts">
@@ -12,7 +12,7 @@ div {{ homeData.page_type }}
         await fetchHomeData()
     } catch (error) {
         console.warn("error: ", error)
-        throw Error("Не удалось получить данные")
+        throw Error("We didn't get the data")
     }
     console.log(homeData.value)
 </script>

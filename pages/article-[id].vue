@@ -1,3 +1,3 @@
 <template lang="pug">
-p Hi
+p hi
 </template>

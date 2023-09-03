@@ -43,6 +43,8 @@ div(class="subscription")
             display: flex;
             flex-wrap: nowrap;
             align-items: flex-end;
+            width: 100%;
+            max-width: 613px;
             margin: 20px 0;
             @media screen and (max-width: 540px) {
                 flex-wrap: wrap;
@@ -56,6 +58,7 @@ div(class="subscription")
             border-bottom: 1px solid $gray;
             margin-right: 37px;
             height: 28px;
+            width: 100%;
         }
         
         &__button {
@@ -63,7 +66,8 @@ div(class="subscription")
             color: $white;
             border-radius: 2px;
             border: none;
-            width: 223px;
+            width: 100%;
+            max-width: 223px;
             height: 46px;
             @media screen and (max-width: 540px) {
                 margin-top: 20px;

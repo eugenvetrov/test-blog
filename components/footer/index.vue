@@ -7,7 +7,7 @@ footer(class="footer-app")
         div(class="footer-app__content_right")
             FooterContacts
             FooterSocialIcons
-    SharedSubscription
+    Subscription
 </template>
 
 <style lang="scss">

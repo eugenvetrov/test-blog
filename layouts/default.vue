@@ -1,8 +1,8 @@
 <template lang="pug">
 div(class="app")
-    GlobalHeader
+    Header
     slot
-    GlobalFooter
+    Footer
 </template>
 
 <style lang="scss">
