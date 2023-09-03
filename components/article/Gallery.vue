@@ -1,12 +1,11 @@
 <script setup lang="ts">
-    const data = defineProps(['data'])
-    const articles = data.data
-    console.log(articles);
+    const props = defineProps(['data'])
+    const articles = props.data
 </script>
 
 <template lang="pug">
 div(class="article-gallery")
-    ArticlePreview(:item="item" :key="item.id" v-for="item in data.data")
+    ArticlePreview(:item="item" :key="item.id" v-for="item in articles")
 </template>
 
 <style lang="scss">

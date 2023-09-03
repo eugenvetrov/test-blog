@@ -1,9 +1,6 @@
 <script setup lang="ts">
-    const config = useRuntimeConfig()
     const props = defineProps(['item'])
     const item = props.item
-    console.log(item);
-    
 </script>
 
 <template lang="pug">

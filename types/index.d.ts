@@ -22,7 +22,7 @@ declare global {
         short_description?: string,
         src?: string,
         caption?: string,
-        aricles?: Array<IArticle>
+        articles?: Array<IArticle>
     }
 
     interface IArticle extends IImage {
