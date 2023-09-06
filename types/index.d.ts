@@ -10,10 +10,10 @@ declare global {
         slug: string
     }
 
-    interface IBodyData <Data extends string, Array> {
+    interface IBodyData <Data> {
         type: string,
         id: string,
-        data: Data
+        data: Data | string | Array
     }
 
     interface IData extends ITitle, IImage {

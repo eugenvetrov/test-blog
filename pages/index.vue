@@ -11,7 +11,7 @@
     }
     const { homeData } = storeToRefs(homePageStore)
     const articleList = homeData?.value?.body.find((item: { type: string }) => item.type === 'article_list_block')
-    const articles = articleList.data.articles
+    const articles = articleList?.data.articles
     
 </script>
 

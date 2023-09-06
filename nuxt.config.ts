@@ -4,6 +4,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@pinia/nuxt',
+    'nuxt-swiper',
+    'vue3-carousel-nuxt'
   ],
   components: {
 		global: true,

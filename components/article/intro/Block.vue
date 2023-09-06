@@ -1,29 +1,29 @@
 <script setup lang="ts">
-    const props = defineProps(['descriptionData'])
-    const descriptionData = props.descriptionData
+    const props = defineProps(['introData'])
+    const introData = props.introData
 </script>
 
 <template lang="pug">
-div(class="article-description")
-    nuxt-img(:src="descriptionData?.image" class="article-description__image" v-if="descriptionData?.image")
-    div(class="article-description__text-wrapper")
-        h3(class="article-description__title") {{ descriptionData?.title }}
-        p(class="article-description__text_gray")
-            nuxt-img(src="images/svg/clock-icon.svg" alt="clock icon" width="16" height="16" class="article-description__icon")
-            span {{ descriptionData?.reading_time }} мин время чтения
-        p(class="article-description__text_gray")
-            nuxt-img(src="images/svg/views-count-icon.svg" alt="clock icon" width="16" height="16" class="article-description__icon")
-            span {{ descriptionData?.views_count }} прочитали статью
-        p(class="article-description__text") {{ descriptionData?.short_description }}
+div(class="article-intro-block")
+    nuxt-img(:src="introData?.image" class="article-intro-block__image"  loading="lazy" v-if="introData?.image")
+    div(class="article-intro-block__text-wrapper")
+        h3(class="article-intro-block__title") {{ introData?.title }}
+        p(class="article-intro-block__text_gray")
+            nuxt-img(src="images/svg/clock-icon.svg" alt="clock icon" width="16" height="16" class="article-intro-block__icon")
+            span {{ introData?.reading_time }} мин время чтения
+        p(class="article-intro-block__text_gray")
+            nuxt-img(src="images/svg/views-count-icon.svg" alt="clock icon" width="16" height="16" class="article-intro-block__icon")
+            span {{ introData?.views_count }} прочитали статью
+        p(class="article-intro-block__text") {{ introData?.short_description }}
 </template>
 
 <style lang="scss">
-    .article-description {
+    .article-intro-block {
         display: flex;
         flex-wrap: wrap;
 
         &__image {
-            width: 40%;
+            width: 30%;
             height: 100%;
             max-width: 541px;
             max-height: 580px;
@@ -38,7 +38,7 @@ div(class="article-description")
         &__text-wrapper {
             display: flex;
             flex-direction: column;
-            width: 60%;
+            width: 50%;
             margin-left: 30px;
 
             @media screen and (max-width: 1024px) {
