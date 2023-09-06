@@ -14,7 +14,7 @@
             <nuxt-img :src="slide" class="carousel__item"/>
         </slide>
         <template #addons="{ slidesCount, currentSlide }">
-            <navigation><div class="article-slider-block__arrow_background"> hello</div></navigation>
+            <navigation><div class="article-slider-block__arrow_background"></div></navigation>
             <p class="carousel__text" v-if="slidesCount > 0">{{ getSlideNumber(currentSlide, slidesCount) }}/{{ slidesCount }}</p>
         </template>
     </carousel>

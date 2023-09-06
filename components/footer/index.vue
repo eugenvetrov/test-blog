@@ -2,7 +2,8 @@
 footer(class="footer-app")
     div(class="footer-app__content")
         div(class="footer-app__content_left")
-            SharedLogo(width="133px" height="33px")
+            NuxtLink(to="/")
+                SharedLogo(width="133px" height="33px")
             FooterDescription
         div(class="footer-app__content_right")
             FooterContacts

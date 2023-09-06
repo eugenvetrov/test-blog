@@ -17,5 +17,6 @@
 
 <template lang="pug">
 PageContent
-    ArticleGallery(:data="articles")
+    Article
+        ArticleListBlock(:data="articles")
 </template>~/stores/base

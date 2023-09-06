@@ -12,26 +12,20 @@
         throw Error("We didn't get the data")
     }
     const { articleData } = storeToRefs(articlePageStore)
-    const getFindData = (type: string) => {
-        return articleData.value?.body.find((item: IBodyData<IData>) => item.type == type)
-    }
-    const getFilterData = (type: string) => {
-        const data = articleData.value?.body.filter((item: IBodyData<IData>) => item.type == type)
-        if (data) return data
-        return []
-    }
-    const introBlock = getFindData("article_intro_block")
-    const [firstTextBlock, secondTextBlock]  = getFilterData("text_block")
-    const imageBlock = articleData.value?.body.find((item: IBodyData<IData>) => item.type == "image_block")
-    const sliderBlock = getFindData("slider_block")
-    console.log(sliderBlock)
+    const introBlock = getFindData(articleData.value, "article_intro_block")
+    const [firstTextBlock, secondTextBlock]  = getFilterData(articleData.value, "text_block")
+    const imageBlock = getFindData(articleData.value, "image_block")
+    const sliderBlock = getFindData(articleData.value, "slider_block")
+    console.log(articleData)
 </script>
 
 <template lang="pug">
 PageContent
-    ArticleIntroBlock(:introData="introBlock?.data" :key="introBlock?.id" v-if="introBlock")
-    ArticleTextBlock(:textData="firstTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
-    ArticleImageBlock(:imageData="imageBlock?.data" :key="imageBlock?.id" v-if="imageBlock")
-    ArticleTextBlock(:textData="secondTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
-    ArticleSliderBlock(:sliderData="sliderBlock?.data" :key="sliderBlock?.id" v-if="sliderBlock")
+    Article
+        ArticleIntroBlock(:introData="introBlock?.data" :key="introBlock?.id" v-if="introBlock")
+        ArticleTextBlock(:textData="firstTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
+        ArticleImageBlock(:imageData="imageBlock?.data" :key="imageBlock?.id" v-if="imageBlock")
+        ArticleTextBlock(:textData="secondTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
+        ArticleSliderBlock(:sliderData="sliderBlock?.data" :key="sliderBlock?.id" v-if="sliderBlock")
+    Subscription
 </template>

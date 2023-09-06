@@ -6,9 +6,9 @@ div(class="page-content")
 <style lang="scss">
     .page-content {
         display: flex;
-        width: 90%;
+        width: 100%;
         flex-direction: column;
-        margin: 30px 0;
         align-items: center;
+        margin: 50px 0;
     }
 </style>

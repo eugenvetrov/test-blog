@@ -36,5 +36,13 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
     },
+  },
+  imports: {
+    dirs: [
+      'utils',
+      'utils/*/index.{ts,js,mjs,mts}',
+      'utils/**'
+    ]
   }
+
 })

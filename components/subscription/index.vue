@@ -19,9 +19,8 @@ div(class="subscription")
     .subscription {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        padding: 0 5%;
         margin-top: 100px;
         min-height: 100px;
         background-color: $black;
