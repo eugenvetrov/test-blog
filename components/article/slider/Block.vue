@@ -15,7 +15,7 @@
         </slide>
         <template #addons="{ slidesCount, currentSlide }">
             <navigation><div class="article-slider-block__arrow_background"> hello</div></navigation>
-            <p class="carousel__text">{{ getSlideNumber(currentSlide, slidesCount) }}/{{ slidesCount }}</p>
+            <p class="carousel__text" v-if="slidesCount > 0">{{ getSlideNumber(currentSlide, slidesCount) }}/{{ slidesCount }}</p>
         </template>
     </carousel>
 </template>
