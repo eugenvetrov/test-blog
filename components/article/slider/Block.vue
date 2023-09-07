@@ -11,7 +11,7 @@
 <template>
     <carousel :items-to-show="1" class="carousel" :wrap-around="false" snapAlign="start" v-if="sliderData">
         <slide v-for="slide in sliderData" :key="slide">
-            <nuxt-img :src="slide" class="carousel__item"/>
+            <nuxt-img :src="slide" class="carousel__item" alt="carousel image"/>
         </slide>
         <template #addons="{ slidesCount, currentSlide }">
             <navigation><div class="article-slider-block__arrow_background"></div></navigation>

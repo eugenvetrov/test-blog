@@ -4,7 +4,7 @@
     const props = defineProps(["textData"])
     const textData = props.textData
     const clean = DOMPurify.sanitize(textData)
-    const isBlockquote = clean.indexOf("blockquote") > -1 ? true : false
+    const isBlockquote = clean.indexOf("blockquote") > -1
 </script>
 
 <template lang="pug">
@@ -43,6 +43,16 @@ div(class="text-block")
         & ul {
             list-style: url(../../../public/images/svg/rectangle-li.svg);
             margin-left: 40px;
+            font-size: 18px;
+            line-height: 26px;
+            color: $eerie-black;
+            @media screen and (max-width: 320px){
+                & {
+                    margin-left: 0;
+                    list-style: none;
+                    padding-inline-start: 0;
+                }
+            }
         }
 
         & li {

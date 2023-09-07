@@ -10,13 +10,12 @@
         throw Error("We didn't get the data")
     }
     const { homeData } = storeToRefs(homePageStore)
-    const articleList = homeData?.value?.body.find((item: { type: string }) => item.type === 'article_list_block')
-    const articles = articleList?.data.articles
+    const listBlock = getFindData(homeData.value, "article_list_block")
     
 </script>
 
 <template lang="pug">
 PageContent
-    Article
-        ArticleListBlock(:data="articles")
+    ArticleContainer
+        ArticleListBlock(:listData="listBlock?.data" :key="listBlock?.id" v-if="listBlock")
 </template>~/stores/base

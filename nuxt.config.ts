@@ -44,5 +44,4 @@ export default defineNuxtConfig({
       'utils/**'
     ]
   }
-
 })

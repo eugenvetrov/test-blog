@@ -1,6 +1,5 @@
 <script setup lang="ts">
     import { ref } from 'vue'
-
     const email = ref('')
     const handleSubmit = () => {
         console.log(email.value)
@@ -24,8 +23,7 @@ div(class="subscription")
         margin-top: 100px;
         min-height: 100px;
         background-color: $black;
-        width: 70%;
-        max-width: 1340px;
+        width: 100%;
 
         @media screen and (max-width: 1440px) {
             width: 100%;
@@ -47,6 +45,7 @@ div(class="subscription")
             margin: 20px 0;
             @media screen and (max-width: 540px) {
                 flex-wrap: wrap;
+                justify-content: center;
             }
         }
 
@@ -58,6 +57,10 @@ div(class="subscription")
             margin-right: 37px;
             height: 28px;
             width: 100%;
+            @media screen and (max-width: 540px) {
+                width: 90%;
+                margin-right: 0;
+            }
         }
         
         &__button {

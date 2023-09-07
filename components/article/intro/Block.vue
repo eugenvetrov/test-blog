@@ -5,7 +5,7 @@
 
 <template lang="pug">
 div(class="article-intro-block")
-    nuxt-img(:src="introData?.image" class="article-intro-block__image"  loading="lazy" v-if="introData?.image")
+    nuxt-img(:src="introData?.image" class="article-intro-block__image" v-if="introData?.image" alt="intro block image")
     div(class="article-intro-block__text-wrapper")
         h3(class="article-intro-block__title") {{ introData?.title }}
         p(class="article-intro-block__text_gray")
@@ -54,7 +54,7 @@ div(class="article-intro-block")
             @media screen and (max-width: 456px) {
                 font-size: 26px;
                 line-height: 30px;
-                font-weight: 800;
+                font-weight: 400;
             }
         }
 

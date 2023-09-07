@@ -15,18 +15,22 @@ footer(class="footer-app")
     .footer-app {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         background-color: $white-smoke;
         justify-content: center;
         border-top: 1px $gray solid;
         padding-top: 40px;
 
+        @media screen and (max-width: 540px) {
+            align-items: center;
+        }
+
         &__content {
             display: flex;
             flex-wrap: wrap;
-            width: 70%;
-            max-width: 1340px;
-            justify-content: space-between;
+            width: 100%;
+            justify-content: space-around;
 
             @media screen and (max-width: 1440px) {
                 width: 90%;

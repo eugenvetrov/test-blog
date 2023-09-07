@@ -30,6 +30,9 @@ div(class="article-preview")
             font-size: 22px;
             line-height: 30px;
             font-weight: 800;
+            @media screen and (max-width: 560px){
+                font-weight: 400;
+            }
         }
 
         &__button {
@@ -42,6 +45,7 @@ div(class="article-preview")
             height: 46px;
             justify-content: center;
             align-items: center;
+            margin-bottom: 20px;
         }
     }
 </style>
