@@ -8,13 +8,13 @@
 </script>
 
 <template lang="pug">
-div(class="text-block")
+div(class="article-text-block")
     div(v-html="clean")
-    nuxt-img(src="images/svg/quotes-left.svg" class="text-block__image_quote" v-if="isBlockquote")
+    nuxt-img(src="images/svg/quotes-left.svg" class="article-text-block__image_quote" v-if="isBlockquote")
 </template>
 
 <style lang="scss">
-    .text-block {
+    .article-text-block {
         position: relative;
 
         & p {

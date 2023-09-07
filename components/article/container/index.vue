@@ -1,10 +1,10 @@
 <template lang="pug">
-div(class="article")
+div(class="article-container")
     slot
 </template>
 
 <style lang="scss">
-    .article {
+    .article-container {
         width: 90%;
     }
 </style>

@@ -26,7 +26,7 @@ PageContent
         ArticleTextBlock(:textData="firstTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
         ArticleImageBlock(:imageData="imageBlock?.data" :key="imageBlock?.id" v-if="imageBlock")
         ArticleTextBlock(:textData="secondTextBlock?.data" :key="firstTextBlock?.id" v-if="firstTextBlock")
-        ArticleSliderBlock(:sliderData="sliderBlock?.data" :key="sliderBlock?.id" v-if="sliderBlock")
+        Slider(:sliderData="sliderBlock?.data" :key="sliderBlock?.id" v-if="sliderBlock")
     Subscription
     ArticleContainer
         ArticleListBlock(:listData="listBlock?.data" :key="listBlock?.id" v-if="listBlock")
