@@ -6,5 +6,8 @@ div(class="article-container")
 <style lang="scss">
     .article-container {
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
