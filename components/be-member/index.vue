@@ -26,6 +26,7 @@ div(class="be-member")
         width: 100%;
         background-color: $black;
         justify-content: space-around;
+        margin-top: 40px;
 
         &__image {
             width: 40%;
