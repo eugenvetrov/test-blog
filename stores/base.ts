@@ -13,7 +13,7 @@ export const useBaseStore = defineStore('page', () => {
         const isEnvApiUrl = config.public?.apiUrl === undefined
         const apiUrl = isEnvApiUrl ? config.public.apiUrl : "https://devtwit8.ru/api/v1/"
         const { data } =
-            await useFetch<IBaseData<IData>>(`${apiUrl}page?path=/article-${articleId}`)
+            await useFetch<IBaseData<IData>>(`${apiUrl}page/?path=/article-${articleId}`)
         if (data.value) articleData.value = data.value
     }
     return { homeData,
