@@ -28,6 +28,7 @@ div(class="article-intro-block")
             max-width: 541px;
             max-height: 580px;
             border-radius: 0 45% 0 0;
+            object-fit: cover;
             aspect-ratio: .93 / 1;
 
             @media screen and (max-width: 1024px) {

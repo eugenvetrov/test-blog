@@ -23,6 +23,7 @@ div(class="article-preview")
             height: auto;
             max-width: 427px;
             max-height: 320px;
+            object-fit: cover;
             aspect-ratio: 4 / 3;
         }
 
